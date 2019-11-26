@@ -1,3 +1,31 @@
+<?php
+session_start();
+include 'config/database.php';
+if (isset($_POST['btnLogin'])) {
+    $db = new Database();
+    $email = $_POST['email'];
+    $pass = md5($_POST['password']);
+    $result = mysqli_query(
+      $db->koneksi,
+      "SELECT * FROM users WHERE email='$email' and password='$pass'"
+    );
+    $row = mysqli_num_rows($result);
+    // var_dump($row);
+    if ($row > 0) {
+      $_SESSION['login'] = $pass;
+      echo "<script type='text/javascript'>
+      alert('Login Berhasil!');
+          window.location = 'admin/index.php'
+      </script>";
+      //;
+    }else {
+      echo "<script type='text/javascript'>
+      alert('Email Atau Password Anda Salah!');
+      </script>";
+      header("location:login.php");
+    }
+}
+?>
 <!DOCTYPE html>
 <!--
 * CoreUI - Free Bootstrap Admin Template
@@ -48,6 +76,7 @@
             <div class="card p-4">
               <div class="card-body">
                 <h1>Login</h1>
+                <form action="" method="post">
                 <p class="text-muted">Sign In to your account</p>
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
@@ -55,7 +84,7 @@
                       <i class="icon-user"></i>
                     </span>
                   </div>
-                  <input class="form-control" type="text" placeholder="Username">
+                  <input class="form-control" type="text" name="email" placeholder="Email">
                 </div>
                 <div class="input-group mb-4">
                   <div class="input-group-prepend">
@@ -63,22 +92,23 @@
                       <i class="icon-lock"></i>
                     </span>
                   </div>
-                  <input class="form-control" type="password" placeholder="Password">
+                  <input class="form-control" type="password" name="password" placeholder="Password">
                 </div>
                 <div class="row">
                   <div class="col-6">
-                    <button class="btn btn-primary px-4" type="button">Login</button>
+                    <button class="btn btn-primary px-4" type="submit" name="btnLogin">Login</button>
                   </div>
                   <div class="col-6 text-right">
                     <button class="btn btn-link px-0" type="button">Forgot password?</button>
                   </div>
                 </div>
+              </form>
               </div>
             </div>
             <div class="card text-white bg-primary py-5 d-md-down-none" style="width:44%">
               <div class="card-body text-center">
                 <div>
-                      <img src="/assets/admin-template/img/logo.jpg" alt="SMK" style="height:auto; width:250px;">
+                      <img src="/assets/admin-template/img/logo.webp" alt="SMK" style="height:auto; width:250px;">
                   </div>
                 </div>
               </div>
