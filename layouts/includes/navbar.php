@@ -39,12 +39,13 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-            <img class="img-avatar" src="/assets/admin-template/img/avatars/9.jpg" alt="admin@bootstrapmaster.com">
+            <img class="img-avatar" src="/assets/admin-template/img/avatars/A.jpg" alt="admin@bootstrapmaster.com">
           </a>
           <div class="dropdown-menu dropdown-menu-right">
             <div class="dropdown-header text-center">
               <strong>Account</strong>
             </div>
+            
             <a class="dropdown-item" href="#">
               <i class="fa fa-bell-o"></i> Updates
               <span class="badge badge-info">42</span>
