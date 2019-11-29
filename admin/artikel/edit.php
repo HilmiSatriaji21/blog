@@ -1,3 +1,4 @@
+<?php
 session_start();
 if (!$_SESSION['login']) {
     echo "<script type='text/javascript'>
@@ -117,8 +118,10 @@ if (!$_SESSION['login']) {
         <!-- End Footer -->
         <!-- CoreUI and necessary plugins-->
         <!-- Scripts -->
-        <?php include('../../layouts/includes/scripts.php') ?>
+        <?php include('../../layouts/includes/script.php') ?>
         <!-- End Scripts -->
     </body>
 
     </html>
+<?php
+} ?>

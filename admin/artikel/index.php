@@ -45,6 +45,7 @@ if (!$_SESSION['login']) {
                                 <i class="icon-graph"></i>  Dashboard</a>
                             <a class="btn" href="#">
                                 <i class="icon-settings"></i>  Settings</a>
+                                
                         </div>
                     </li>
                 </ol>
@@ -53,7 +54,7 @@ if (!$_SESSION['login']) {
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
-                                    Daftar Kategori
+                                    Daftar Artikel
                                     <a href="/admin/artikel/create.php" class="btn btn-sm btn-info float-md-right">Tambah</a>
                                 </div>
 
@@ -80,6 +81,7 @@ if (!$_SESSION['login']) {
                                                         <td><?php echo $data['nama_kategori']; ?></td>
                                                         <td><?php echo $data['nama']; ?></td>
                                                         <td> <img src="/admin/artikel/img/<?php echo $data['foto']; ?>" alt="" style="width:75px; height:50px;"></td>
+                                                        
                                                         <td>
                                                             <a href="/admin/artikel/proses.php?id=<?php echo $data['id']; ?>&aksi=delete" class="btn btn-sm btn-danger" onclick="return confirm('Apakah Anda Yakin ?')">Delete</a> |
                                                             <a href="/admin/artikel/show.php?id=<?php echo $data['id']; ?>" class="btn btn-sm btn-warning">Show</a> |
@@ -97,6 +99,7 @@ if (!$_SESSION['login']) {
                     </div>
                 </div>
             </main>
+            
 
             <!-- End Main Conten -->
 
@@ -106,7 +109,7 @@ if (!$_SESSION['login']) {
         <!-- End Footer -->
         <!-- CoreUI and necessary plugins-->
         <!-- Scripts -->
-        <?php include('../../layouts/includes/scripts.php') ?>
+        <?php include('../../layouts/includes/script.php') ?>
         <!-- End Scripts -->
     </body>
 

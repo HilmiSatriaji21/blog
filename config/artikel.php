@@ -8,7 +8,7 @@ class Artikel extends Database
             $this->koneksi,
             "SELECT artikel.id, artikel.judul, artikel.foto,
             artikel.tgl, artikel.slug, kategori.nama as nama_kategori,
-            users,nama FROM ((artikel JOIN kategori ON kategori.id =
+            users.nama FROM ((artikel JOIN kategori ON kategori.id =
             artikel.id_kategori)
             JOIN users ON users.id = artikel.id_user)"
         );

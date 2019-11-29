@@ -64,8 +64,8 @@ if (!$_SESSION['login']) {
                                             $konten = $data['konten'];
                                             $foto = $data['foto'];
                                             $tgl = $data['tgl'];
-                                            $kategori = $data['nama_kategori'];
-                                            $penulis = $data['nama_penulis'];
+                                            $kategori = $data['id_kategori'];
+                                            $penulis = $data['id_user'];
                                         }
                                         // var_dump($artikel);                                    
                                         ?>
@@ -94,7 +94,7 @@ if (!$_SESSION['login']) {
         <!-- End Footer -->
         <!-- CoreUI and necessary plugins-->
         <!-- Scripts -->
-        <?php include('../../layouts/includes/scripts.php') ?>
+        <?php include('../../layouts/includes/script.php') ?>
         <!-- End Scripts -->
     </body>
 

@@ -2,7 +2,16 @@
 include '../../config/koneksi.php';
 $artikel = new Artikel();
 $aksi = $_GET['aksi'];
+
+$user = new Database();
+$user = mysqli_query(
+     $user->koneksi,
+     "select * from users where password='$_SESSION[login]'"
+);
+$user = mysqli_fetch_array($user);
+
 if (isset($_POST['save'])) {
+    
     $id = $_POST['id'];
     $judul = $_POST['judul'];
     $konten = $_POST['konten'];
