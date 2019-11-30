@@ -70,11 +70,32 @@ if (isset($_POST['btnLogin'])) {
   </head>
   <body class="app flex-row align-items-center">
     <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
           <div class="card-group">
             <div class="card p-4">
               <div class="card-body">
+               <div class="col-6 ">
+                 <i class="fa fa-facebook fa-lg mt-4"></i>
+                 <i class="fa fa-instagram fa-lg mt-4"></i>
+                 <i class="fa fa-twitter fa-lg mt-4"></i>
+                 <i class="fa fa-pinterest fa-lg mt-4"></i>
+                 <i class="fa fa-youtube-play fa-lg mt-4"></i>
+                 <i class="fa fa-linux fa-lg mt-4"></i>
+                 <i class="fa fa-html5 fa-lg mt-4"></i>
+                 <i class="fa fa-google fa-lg mt-4"></i>
+                 <i class="fa fa-github fa-lg mt-4"></i>
+                 <i class="fa fa-css3 fa-lg mt-4"></i>
+                 <i class="fa fa-chrome fa-lg mt-4"></i>
+                 <i class="fa fa-apple fa-lg mt-4"></i>
+                 <i class="fa fa-android fa-lg mt-4"></i>
+                 <i class="fa fa-usd"></i>
+                 <i class="fa fa-bitcoin fa-lg mt-4"></i>
+                 <i class="fa fa-thumbs-up fa-lg mt-4"></i>
+                 <i class="fa fa-whatsapp fa-lg mt-4"></i>
+                 <i class="fa fa-reddit-alien fa-lg mt-4"></i>
+                 <i class="fa fa-diamond fa-lg mt-4"></i>
+                 <i class="fa fa-gamepad fa-lg mt-4"></i>
+                </div>
                 <h1>Login</h1>
                 <form action="" method="post">
                 <p class="text-muted">Sign In to your account</p>
@@ -108,7 +129,7 @@ if (isset($_POST['btnLogin'])) {
             <div class="card text-white bg-primary py-5 d-md-down-none" style="width:44%">
               <div class="card-body text-center">
                 <div>
-                      <img src="/assets/admin-template/img/logo.webp" alt="SMK" style="height:auto; width:250px;">
+                      <img src="/assets/admin-template/img/index.png" alt="SMK" style="height:auto; width:250px;">
                   </div>
                 </div>
               </div>
